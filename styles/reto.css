@@ -1,0 +1,29 @@
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* contenedor de la imagen para la animación*/
+.imagen {
+    width: 180px; /* ancho de un solo frame, el que se multiplica para saber el ancho de cada paso... o eso entendí */
+    height: 300px; /* alto de la imagen o animación, no sé */
+    background-image: url(../media/Animación.png);
+    background-repeat: no-repeat;
+
+    /* ajustes para la animación -duración-pasos-y cuanto se repite*/
+    animation: caminar 0.6s steps(4) infinite; 
+}
+
+/* animación de la imagen */
+@keyframes caminar {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -720px 0;
+        /*multiplico el width de arriba para sacar esta posición*/
+    }
+}
